@@ -1,8 +1,14 @@
 # scss-shortcuts
 Useful mixins for faster and better front-end work. Just import and go.
 
-## Mixins for extended CSS
+## Getting Started
+Install the module with:
+`npm install scss-shortcuts`
+
+## Usage
 Import scss file before referring to mixins. ` @import 'scss-shortcuts';`
+
+## Mixins for extended CSS
 
 ### BoxShadow:
 Mixin Categoty | Example Include
