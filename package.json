@@ -1,0 +1,22 @@
+{
+  "name": "scss-shortcuts",
+  "version": "1.0.0",
+  "description": "An npm Package of useful mixins for faster and better front-end work.",
+  "main": "scss/_scss-shortcuts.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterknezek/scss-shortcuts.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": "Peter Knezek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterknezek/scss-shortcuts/issues"
+  },
+  "homepage": "https://github.com/peterknezek/scss-shortcuts#readme"
+}
