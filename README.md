@@ -56,3 +56,31 @@ Transition delay | `@include transition-delay(2s);`
 Mixin Categoty | Example Include
 ------------ | -------------
 Input placeholder  | `@input-placeholder(Your name);`
+
+
+## Responsive breakpoints
+Breakpoints are set by default but you can change value of variables. Value are set for bootstrap by default.
+```
+$screen-xs-max: 768px;
+$screen-sm-max: 992px;
+$screen-md-max: 1200px;
+```
+
+Example for maximum bootstrap col `col-md` you can use => {xs,sm,md}:
+```
+@include max-col(md) {
+    ...
+}
+```
+or up to `col-md` {xs,sm,md}:
+```
+@include min-col(md) {
+    ...
+}
+```
+if you want to add styles only for `col-md` {xs, sm, md}. Only for "col-md":
+```
+@include just-col(md) {
+    ...
+}
+```
