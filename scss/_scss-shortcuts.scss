@@ -30,6 +30,52 @@ Transition                          @include transition(box-shadow ease-in 1s);
 
 Input placeholder                   @input-placeholder(Your name);
 */
+/*////////////////////////////   Responsive breakpoints   ///////////////////////// */
+    /* based on Bootstrap */
+    $screen-xs-max: 768px !default;
+    $screen-sm-max: 992px !default;
+    $screen-md-max: 1200px !default;
+ 
+    @mixin max-col($media) {
+      @if $media == xs {
+        @media (max-width: $screen-xs-max) { @content; }
+      }
+      @else if $media == sm {
+        @media (max-width: $screen-sm-max) { @content; }
+      }
+      @else if $media == md {
+        @media (max-width: $screen-sm-max) { @content; }
+      }
+    }
+ 
+    @mixin min-col($media) {
+      @if $media == xs {
+        @media (min-width: $screen-xs-max) { @content; }
+      }
+      @else if $media == sm {
+        @media (min-width: $screen-sm-max) { @content; }
+      }
+      @else if $media == md {
+        @media (min-width: $screen-sm-max) { @content; }
+      }
+    }
+
+    @mixin just-col($media) {
+	  @if $media == xs {
+		  @media (max-width: ($screen-xs-max - 1px)) { @content; }
+	  }
+	  @else if $media == sm {
+		  @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) { @content; }
+	  }
+	  @else if $media == md {
+		@media (min-width: $screen-sm-max) and (max-width: $screen-md-max) { @content; }
+	  }
+	  @else if $media == lg {
+		@media (min-width: $screen-md-max) { @content; }
+	  }
+	}
+
+
 /*////////////////////////////   Mixins  ///////////////////////// */
 
 @mixin box-shadow($top, $left, $blur, $size: 0, $shadow-color: #000000, $inset: false, $another-shadows: false) {
